@@ -18,25 +18,25 @@ const startServer = async (): Promise<void> => {
     await connectDB()
 
     server.listen(PORT, () => {
-      console.log(`\n🚀  EduDesk API running in ${config.server.nodeEnv} mode`)
-      console.log(`📡  Server:   http://localhost:${PORT}`)
-      console.log(`🩺  Health:   http://localhost:${PORT}/health`)
-      console.log(`🔗  API base: http://localhost:${PORT}/api/v1\n`)
+      console.log(`\nMarkbook API is up & running in ${config.server.nodeEnv} mode`)
+      console.log(`Server:   http://localhost:${PORT}`)
+      console.log(`Health:   http://localhost:${PORT}/health`)
+      console.log(`API base: http://localhost:${PORT}/api/v1\n`)
     })
   } catch (error) {
-    console.error('❌  Failed to start server:', error)
+    console.error('Failed to start server:', error)
     process.exit(1)
   }
 }
 
 // Graceful shutdown
 const shutdown = async (signal: string): Promise<void> => {
-  console.log(`\n⚠️   ${signal} received — shutting down gracefully...`)
+  console.log(`\n${signal} received — shutting down gracefully...`)
 
   server.close(async () => {
-    console.log('🔌  HTTP server closed')
+    console.log('HTTP server closed')
     await disconnectDB()
-    console.log('👋  Goodbye!\n')
+    console.log('Goodbye!\n')
     process.exit(0)
   })
 
