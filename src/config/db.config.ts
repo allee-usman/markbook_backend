@@ -14,7 +14,7 @@ const connectDB = async (): Promise<void> => {
 
     // Connection event listeners
     mongoose.connection.on('disconnected', () => {
-      console.warn('⚠️ MongoDB disconnected — retrying...')
+      console.warn('MongoDB disconnected — retrying...')
     })
 
     mongoose.connection.on('reconnected', () => {
@@ -33,7 +33,7 @@ const connectDB = async (): Promise<void> => {
 // Graceful shutdown
 export const disconnectDB = async (): Promise<void> => {
   await mongoose.connection.close()
-  console.log('🔌  MongoDB disconnected gracefully')
+  console.log('MongoDB disconnected gracefully')
 }
 
 export default connectDB
