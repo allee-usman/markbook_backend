@@ -1,16 +1,16 @@
 //  HTTP Status Codes 
 export const HTTP_STATUS = {
-  OK: 200,
-  CREATED: 201,
-  NO_CONTENT: 204,
-  BAD_REQUEST: 400,
-  UNAUTHORIZED: 401,
-  FORBIDDEN: 403,
-  NOT_FOUND: 404,
-  CONFLICT: 409,
-  UNPROCESSABLE: 422,
-  TOO_MANY_REQUESTS: 429,
-  INTERNAL_SERVER_ERROR: 500,
+  OK: 200 as number,
+  CREATED: 201 as number,
+  NO_CONTENT: 204 as number,
+  BAD_REQUEST: 400 as number,
+  UNAUTHORIZED: 401 as number,
+  FORBIDDEN: 403 as number,
+  NOT_FOUND: 404 as number,
+  CONFLICT: 409 as number,
+  UNPROCESSABLE: 422 as number,
+  TOO_MANY_REQUESTS: 429 as number,
+  INTERNAL_SERVER_ERROR: 500 as number,
 } as const
 
 //  User Roles
